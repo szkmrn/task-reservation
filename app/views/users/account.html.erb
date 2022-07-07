@@ -1,2 +1,31 @@
-<h1>Users#acount</h1>
-<p>Find me in app/views/users/acount.html.erb</p>
+<%= render "shared/header" %>
+<h1>Users#account</h1>
+<div class="row">
+  <div class="col-3">
+    <div class="sidebar_content">
+      <ul>
+        <li calss="text-dark"><%=link_to_unless_current"アカウント","/users/account"%></li>  
+        <li><%=link_to"プロフィール","/users/profile",class:"link-user"%></li>
+      </ul>
+    </div>
+  </div>
+  <div class="col">
+      
+    <div class="mb-3 row">
+      <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="inputPassword">
+      </div>
+    </div>
+    <button type="button" class="btn btn-primary"><%=link_to"編集","/users/edit",class:"link-user"%></button>
+  </div>
+</div>
+</div>
+
+					

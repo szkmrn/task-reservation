@@ -1,2 +1,26 @@
+<%= render "shared/header" %>
 <h1>Users#plofile</h1>
-<p>Find me in app/views/users/plofile.html.erb</p>
+<div class="row">
+  <div class="col-3">
+    <div class="sidebar_content">
+      <ul>
+        <li calss="text-dark"><%=link_to"アカウント","/users/account"%></li>  
+        <li calss="text-dark"><%=link_to_unless_current"プロフィール","/users/profile"%></li>
+      </ul>
+    </div>
+  </div>
+  <div class="col">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">名前</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">自己紹介</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    
+  </div>
+</div>
+</div>
+
+					
