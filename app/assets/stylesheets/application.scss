@@ -14,13 +14,32 @@
  */
  li{
     list-style:none;
+ }
+
+.link_user{
+    color:#000;
 }
- 
-.link-user{
-   color:#000;
-}  
 .home-link-user{
-   color:#fff;
+    color:#fff;
 }
 
+.sidebar_link{
+    color:#000;
+   
+}
+.sidebar_tab{
+    padding:10px 0;
+    text-align:right;
+}
+.sidebar_link:hover{
+    text-decoration:none; 
+    color:blue;
+}
+.sidebar_tab:hover{
+    border-right:medium solid blue;
+}
+
+.user-view{
+    background-color:gray;
+}
  @import "bootstrap"
