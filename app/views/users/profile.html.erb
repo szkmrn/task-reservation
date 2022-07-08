@@ -1,5 +1,5 @@
 <%= render "shared/header" %>
-<h1>Users#plofile</h1>
+
 <div class="row">
   <div class="col-3">
     <div class="sidebar_content">
@@ -9,17 +9,21 @@
       </ul>
     </div>
   </div>
+   <%=form_for @user,:url => {:users_profile => :user,method: :patch} do |f|%>
+  
   <div class="col">
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">名前</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      <div><%= f.text_field:name%></div>
     </div>
     <div class="mb-3">
       <label for="exampleFormControlTextarea1" class="form-label">自己紹介</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <div><%= f.text_area:introduction%></div>
     </div>
     
+    <%= f.submit "更新" %>
   </div>
+  <% end %>
 </div>
 </div>
 

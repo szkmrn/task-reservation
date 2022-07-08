@@ -1,10 +1,25 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
+
+  
   def account
-    @users= current_user
+    @user= current_user
   end
 
   def profile
-    @users= current_user
+    @user= current_user
   end
+  
+  def update
+    if @user.update
+      redirect_to :users_profile
+    else
+      render :users_profile
+    end  
+  end
+
+    
+  
+  
+  
 end
