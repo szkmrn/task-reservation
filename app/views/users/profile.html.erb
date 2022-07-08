@@ -1,30 +1,30 @@
 
-
-<div class="row">
-  <div class="col-3">
-    <div class="sidebar_content">
-      <ul>
-        <li calss="text-dark"><%=link_to"アカウント","/users/account"%></li>  
-        <li calss="text-dark"><%=link_to_unless_current"プロフィール","/users/profile"%></li>
-      </ul>
-    </div>
+<div class="row h-100">
+  <div class="col-2">
+    <%= render "shared/sidebar" %>
   </div>
-   <%=form_for @user,:url => {:users_profile => :user,method: :patch} do |f|%>
-  
+
   <div class="col">
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">名前</label>
-      <div><%= f.text_field:name%></div>
+    <%=form_for @user,:url => {:users_profile => :user,method: :patch} do |f|%>
+    <div class="mb-3 mr-5 ml-5 row">プロフィール</div>
+    <div class="mb-3 mr-5 ml-5 row">
+      <label for="exampleFormControlInput1" class="form-label col-3">名前</label>
+      <div class="col-5">
+        <%= f.text_field:name,class:"col-12"%>
+       </div> 
     </div>
-    <div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="form-label">自己紹介</label>
-      <div><%= f.text_area:introduction%></div>
+    <div class="mb-3 mr-5 ml-5 row">
+      <label for="exampleFormControlTextarea1" class="form-label col-3">自己紹介</label>
+    <div class="col-5">  
+      <%= f.text_area:introduction,class:"col-12"%>
+    </div>  
     </div>
-    
-    <%= f.submit "更新" %>
+    <div class="ml-5 col-3">
+     <%= f.submit "更新" %>
+    </div> 
   </div>
   <% end %>
 </div>
-</div>
+
 
 					
