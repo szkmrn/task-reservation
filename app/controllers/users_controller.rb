@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-
   
   def account
     @user= current_user
@@ -12,7 +11,7 @@ class UsersController < ApplicationController
 
   def update
     @user = current_user
-    if @user.update(params.require(:user).permit(:name,:introduction))
+    if @user.update(params.require(:user).permit(:name,:introduction,:image))
       flash[:notice] = "ユーザープロフィールの情報を更新しました"
       redirect_to :users_profile
     else

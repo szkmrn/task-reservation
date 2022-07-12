@@ -5,8 +5,15 @@
   </div>
 
   <div class="col">
+  
     <%=form_for @user,:url => {:users_profile => :user,method: :patch} do |f|%>
     <div class="mb-3 mr-5 ml-5 row">プロフィール</div>
+    <div class="mb-3 mr-5 ml-5 row">
+      <label for="exampleFormControlInput1" class="form-label col-3">アイコン画像</label>
+      <div class="col-5">
+        <%= f.file_field :image,class:"col-12"%>
+       </div> 
+    </div>
     <div class="mb-3 mr-5 ml-5 row">
       <label for="exampleFormControlInput1" class="form-label col-3">名前</label>
       <div class="col-5">
@@ -15,9 +22,9 @@
     </div>
     <div class="mb-3 mr-5 ml-5 row">
       <label for="exampleFormControlTextarea1" class="form-label col-3">自己紹介</label>
-    <div class="col-5">  
-      <%= f.text_area:introduction,class:"col-12"%>
-    </div>  
+      <div class="col-5">  
+        <%= f.text_area:introduction,class:"col-12" %>
+      </div>  
     </div>
     <div class="ml-5 col-3">
      <%= f.submit "更新" %>

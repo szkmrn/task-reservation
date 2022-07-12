@@ -30,7 +30,8 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'devise'
 gem 'pry-rails'
-
+gem 'mini_magick'
+gem 'image_processing'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
