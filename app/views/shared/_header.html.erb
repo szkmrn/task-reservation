@@ -2,7 +2,7 @@
   <img class="my-0 mr-md-auto font-weight-normal" id="home-logo" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png">
   <% if user_signed_in? %>
     <div class="p-2 m-1 text-white"><%= current_user.name %></div>
-    <div class="nav-item p-2 m-1">
+    <div class="user-header-image nav-item p-2 m-1">
       <%= image_tag current_user.image ,style: "border-radius: 50%",:size => "65x65" %>
     </div>
   <% else %>  
@@ -10,6 +10,12 @@
     <div class="p-2 m-1 btn btn-outline-info text-white bg-info"><%= link_to"新規登録","/users/sign_up",class:"home-link-user"%></div>
   <% end %>  
 </div>
-<div class="row justify-content-end" >
+<div class="user-headnav row justify-content-end" >
 <%= render "shared/headnav" %>  
 </div>
+<script>
+  $('.user-headnav').hide();
+  $('.user-header-image').on('click',function(){
+    $('.user-headnav').slideToggle();
+  })
+</script>
