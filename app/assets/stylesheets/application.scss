@@ -12,6 +12,9 @@
  *
 
  */
+ body{
+    margin:0px;
+ }
  li{
     list-style:none;
  }
@@ -50,4 +53,10 @@
 .conteiner-view{
     height:100%;
 }
+
+.nav-content{
+    z-index: 1000;
+}
+
+
  @import "bootstrap"
