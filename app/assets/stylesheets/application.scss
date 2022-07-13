@@ -15,6 +15,10 @@
  body{
     margin:0px;
  }
+ main{
+    z-index: 100;
+ }
+ 
  li{
     list-style:none;
  }
@@ -22,6 +26,7 @@
 .link_user{
     color:#000;
 }
+
 .home-link-user{
     color:#fff;
 }
@@ -53,10 +58,15 @@
 .conteiner-view{
     height:100%;
 }
-
-.nav-content{
+.user_headnav{
+    position:absolute;
+    left:1110px;
     z-index: 1000;
 }
 
+
+.nav_link:hover{
+    text-decoration: none;
+}
 
  @import "bootstrap"
