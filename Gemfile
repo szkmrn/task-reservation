@@ -27,6 +27,8 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap', '~> 4.3.1'
+gem 'rails-i18n'
+gem 'devise-i18n'
 gem 'jquery-rails'
 gem 'devise'
 gem 'pry-rails'
