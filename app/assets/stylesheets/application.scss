@@ -34,6 +34,9 @@
     border-right: solid 1px #000;
 
 }
+.nav_link:hover{
+    text-decoration:none;
+}
 
 
 .sidebar_link{
@@ -64,10 +67,6 @@
     z-index: 1000;
 }
 
-
-.nav_link:hover{
-    text-decoration: none;  
-}
 .dvise_frame{
     width:600px;
     margin:0 auto;
@@ -103,7 +102,9 @@
 .intoroduction-form{
     border:1px solid #ced4da;
 }
-
+.sign_in_link:hover{
+    text-decoration: none;
+}
 
  @import "bootstrap"
 
