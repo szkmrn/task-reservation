@@ -3,7 +3,11 @@
   <% if user_signed_in? %>
     <div class="p-2 m-1 text-white"><%= current_user.name %></div>
     <div class="user_header_image nav-item p-2 m-1">
-      <%= image_tag current_user.image ,style: "border-radius: 50%",:size => "65x65" %>
+      <% if current_user.image.attached? %>
+        <%= image_tag current_user.image ,style: "border-radius: 50%",:size => "65x65" %>
+      <%else%>
+        <%= image_tag "noimage.png",style: "border-radius: 50%",:size => "65x65"%>
+      <%end%>
     </div>
   <% else %>  
     <div class="p-2 m-1 btn btn-outline-primary text-white bg-primary"><%= link_to"ログイン","/users/sign_in",class:"home-link-user"%></div>
