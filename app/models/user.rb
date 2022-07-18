@@ -8,4 +8,5 @@ class User < ApplicationRecord
   validates :introduction, length: { maximum: 200 } 
 
   has_one_attached :image
+  has_many:rooms,dependent:destroy
 end
