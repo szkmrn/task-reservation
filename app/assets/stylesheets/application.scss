@@ -105,7 +105,14 @@
 .sign_in_link:hover{
     text-decoration: none;
 }
-
+.room-show-detile{
+    display:flex;
+    border-bottom:1px solid #DDDDDD;
+}
+.room-show-profile-name{
+    font-size: large;
+    font-weight: bold;
+}
  @import "bootstrap"
 
 

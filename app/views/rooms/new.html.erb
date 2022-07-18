@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="row">
+    <div class="col-2">
+  </div>
+  <div class="col-10 room-view">
+    <div class="room-new-box">
+      <%= form_with model:@room do |r| %>
+          <div class="room-new-field mb-3 ">
+            <h3>ルーム情報登録</h3>
+          </div>
+          <div class="room-new-field mb-3 ">
+            <div class="row">
+              <div class="col-3">
+                <%= r.label :name ,"ルーム名" %>
+                <span class="badge badge-danger">必須</span>
+              </div>
+              <div class="col-9">
+                <%= r.text_field :name,class:"w-100" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="room-new-field mb-3 ">
+            <div class="row">
+              <div class="col-3">
+                <%= r.label :information ,"ルーム紹介" %>
+                <span class="badge badge-danger">必須</span> 
+              </div>
+              <div class="col-9">
+                <%= r.text_area :information,class:"w-100" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="room-new-field mb-3 ">
+            <div class="row">
+              <div class="col-3">
+                <%= r.label :price ,"料金" %>
+                <span class="badge badge-danger">必須</span>
+              </div>
+              <div class="col-9">
+                <%= r.text_field :price,class:"w-100" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="room-new-field mb-3 ">
+            <div class="row">
+              <div class="col-3">
+                <%= r.label :address ,"住所" %>
+                <span class="badge badge-danger">必須</span>
+              </div>
+              <div class="col-9">
+                <%= r.text_field :address,class:"w-100" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-3 p-0">
+            <%= r.submit "登録", class:"p-2 m-1 btn-outline-primary text-white bg-primary col-12 rounded" %>
+          </div> 
+
+      <% end %>  
+    </div>
+  </div>
+</div>  

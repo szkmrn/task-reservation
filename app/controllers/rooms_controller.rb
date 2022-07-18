@@ -3,12 +3,23 @@ class RoomsController < ApplicationController
   end
 
   def new
+    @room = Room.new
   end
 
   def create
+    @room = Room.new(rooms_params)
+    @room.user_id = current_user.id
+    if @room.save
+      flash[:notice] = "ルームの新規登録が完了しました"
+      redirect_to room_path(@room.id)
+    else
+      render "new"
+    end
   end
 
   def show
+   @room = Room.find(params[:id])
+   @user = current_user
   end
 
   def edit
@@ -17,7 +28,8 @@ class RoomsController < ApplicationController
   def update
   end
 
-  def destroy
-  end
 
+  def rooms_params
+    params.require(:room).permit(:user_id,:name,:information,:price,:address)
+  end
 end
