@@ -8,6 +8,7 @@
           <div class="room-new-field mb-3 ">
             <h3>ルーム情報登録</h3>
           </div>
+
           <div class="room-new-field mb-3 ">
             <div class="row">
               <div class="col-3">
@@ -52,6 +53,18 @@
               </div>
               <div class="col-9">
                 <%= r.text_field :address,class:"w-100" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="room-new-field mb-3 ">
+            <div class="row">
+              <div class="col-3">
+                <%= r.label :name ,"ルーム画像" %>
+                <span class="badge badge-danger">必須</span>
+              </div>
+              <div class="col-9">
+                <%= r.file_field :picture %>
               </div>
             </div>
           </div>
