@@ -34,7 +34,7 @@
     border-right: solid 1px #000;
 
 }
-.nav_link:hover{
+.nav_link :hover{
     text-decoration:none;
 }
 
@@ -118,6 +118,17 @@
     height:100%;
     background-color: red;
 
+}
+
+.room-view{
+    border-left:1px solid #DDDDDD;
+}
+
+.roombar_tab{
+    border-right:1px solid #6699FF;
+}
+.roombar_link:hover{
+    text-decoration: none;
 }
  @import "bootstrap"
 
