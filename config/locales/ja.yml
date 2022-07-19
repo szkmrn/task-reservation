@@ -7,4 +7,16 @@ ja:
          name: 名前
          email: メールアドレス
          introduction: 一言紹介
-    
+
+ja:
+  activerecord:
+    models:
+      room:
+    attributes:
+      room:
+       name: ルーム名
+       information: ルーム紹介
+       price: 料金
+       address: 住所
+       picture: ルーム画像
+

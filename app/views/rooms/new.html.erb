@@ -8,11 +8,13 @@
           <div class="room-new-field mb-3 ">
             <h3>ルーム情報登録</h3>
           </div>
-
+          <div class="room-new-field mb-5 ">
+            <%=render "shared/error",obj:@room %>
+          </div>
           <div class="room-new-field mb-3 ">
             <div class="row">
               <div class="col-3">
-                <%= r.label :name ,"ルーム名" %>
+                <label>ルーム名</label>
                 <span class="badge badge-danger">必須</span>
               </div>
               <div class="col-9">
@@ -24,7 +26,7 @@
           <div class="room-new-field mb-3 ">
             <div class="row">
               <div class="col-3">
-                <%= r.label :information ,"ルーム紹介" %>
+              <label>ルーム紹介</label>
                 <span class="badge badge-danger">必須</span> 
               </div>
               <div class="col-9">
@@ -36,7 +38,7 @@
           <div class="room-new-field mb-3 ">
             <div class="row">
               <div class="col-3">
-                <%= r.label :price ,"料金" %>
+              <label>料金</label>
                 <span class="badge badge-danger">必須</span>
               </div>
               <div class="col-9">
@@ -48,7 +50,7 @@
           <div class="room-new-field mb-3 ">
             <div class="row">
               <div class="col-3">
-                <%= r.label :address ,"住所" %>
+              <label>住所</label>
                 <span class="badge badge-danger">必須</span>
               </div>
               <div class="col-9">
@@ -60,7 +62,7 @@
           <div class="room-new-field mb-3 ">
             <div class="row">
               <div class="col-3">
-                <%= r.label :name ,"ルーム画像" %>
+              <label>ルーム画像</label> 
                 <span class="badge badge-danger">必須</span>
               </div>
               <div class="col-9">
