@@ -17,7 +17,7 @@
       <td>
         <%= image_tag room.picture,:size => "200x200"%>
       </td>
-      <td class="posts-name"><%= room.name %></td>
+      <td class="posts-name"><%=link_to room.name,room_path(room.id) %></td>
       <td><%= room.information %></td>
       <td>¥<%= room.price %></td>
       <td><%= room.created_at %></td>
