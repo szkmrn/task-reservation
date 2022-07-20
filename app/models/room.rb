@@ -1,7 +1,7 @@
 class Room < ApplicationRecord
     belongs_to :user
     has_one_attached :picture
-    has_one_attached :image
+    
    
     validates :name,presence:true
     validates :information,presence:true
