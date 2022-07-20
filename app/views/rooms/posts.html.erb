@@ -13,7 +13,7 @@
   <% @room.each do |room| %>
     <tr>
       <th>
-        <%= image_tag "room.picture",:size => "200x200"%>
+        <%= image_tag room.picture,:size => "200x200"%>
       </th>
       <th><%= room.name %></th>
       <th><%= room.information %></th>

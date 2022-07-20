@@ -22,11 +22,14 @@ class RoomsController < ApplicationController
     @user = current_user
     @room = Room.where(user_id:@user.id) 
   end
-
+  
   def show
     @room = Room.find(params[:id])
     @user = current_user
   end
+
+  
+
 
   def edit
   end
