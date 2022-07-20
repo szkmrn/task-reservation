@@ -19,6 +19,24 @@
     z-index: 100;
  }
  
+ thead{
+    text-align: center;
+    border-bottom:1px solid #DDDDDD;
+    border-top:1px solid #DDDDDD;
+ }
+ thead th{
+    padding:8px 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+ }
+
+ tbody td{
+    padding: 10px;
+ }
+ tbody tr:nth-child(even){
+    background-color: #f9fafb;
+ }
+
  li{
     list-style:none;
  }
@@ -130,6 +148,16 @@
 .roombar_link:hover{
     text-decoration: none;
 }
+
+.room-posts{
+    max-width: 100vw;
+    padding:30px 60px;
+}
+.posts-name{
+    font-size: 18px;
+    font-weight:bold;
+}
+
  @import "bootstrap"
 
 

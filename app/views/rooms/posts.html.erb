@@ -1,5 +1,7 @@
-<h3>登録済みルーム一覧</h3>
-<table>
+<div class="room-posts">
+ 
+<h4 class="pd-4">登録済みルーム一覧</h4>
+<table class="posts-table">
 <thead>
   <tr>
     <th>ルーム画像</th>
@@ -12,14 +14,15 @@
 <tbody>
   <% @room.each do |room| %>
     <tr>
-      <th>
+      <td>
         <%= image_tag room.picture,:size => "200x200"%>
-      </th>
-      <th><%= room.name %></th>
-      <th><%= room.information %></th>
-      <th><%= room.price %></th>
-     
+      </td>
+      <td class="posts-name"><%= room.name %></td>
+      <td><%= room.information %></td>
+      <td>¥<%= room.price %></td>
+      <td><%= room.created_at %></td>
     </tr> 
 
   <% end %>
 </tbody>
+</div>
