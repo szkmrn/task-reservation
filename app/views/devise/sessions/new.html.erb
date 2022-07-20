@@ -5,7 +5,7 @@
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="field mb-3 w-100 row ml-0 mr-0">
           <div class="col-2"><span class="badge badge-danger">必須</span></div>  
-          <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"ユーザー名",class:"col-10 form-control"%>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"メールアドレス",class:"col-10 form-control"%>
         </div>
 
         <div class="field mb-3 w-100 row ml-0 mr-0">
