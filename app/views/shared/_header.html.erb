@@ -2,7 +2,12 @@
   <div class="header-left-container">
     <img class="my-0 mr-md-auto font-weight-normal" id="home-logo" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png">
     <div class="header-search-container mt-3">
-      <input type="text">
+      <div>
+        <%= form_tag({controller:"rooms",action:"search"},method: :get) do %>
+          <%= text_field_tag :address %>
+          <% submit_tag %>
+        <% end %>
+      </div>
       <input type="text">
     </div>
   </div>

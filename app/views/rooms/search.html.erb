@@ -1,0 +1,14 @@
+<div class="container">
+  <h3>検索結果</h3>
+    <div class="row">
+      <% @room.each do |room| %>
+        <div class="col-3">
+          <%= image_tag "room.picture",:size => "200x200" %>
+          <div><%= room.name %></div>
+          <div><%= room.address %></div>
+          <div>¥<%= room.price %></div>
+        </div>
+      <% end %> 
+    </div>
+
+</div>

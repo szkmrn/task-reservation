@@ -11,7 +11,8 @@ Rails.application.routes.draw do
   get '/',to:'homes#home'
   
   resources :users
-  get "rooms/posts",to:'rooms#posts'
+  get 'rooms/posts',to:'rooms#posts'
+  get 'rooms/search',to:'rooms#search'
   resources :rooms
   
    

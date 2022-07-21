@@ -18,6 +18,16 @@ class RoomsController < ApplicationController
     end
   end
 
+  def search
+    if params[:address] == nil
+      @room = Room.all
+    elsif params[:address] == "" 
+      @room = Room.all
+    else  
+      @room = Room.where("address LIKE?",'%'+params[:address]+'%')
+    end
+  end
+
   def posts
     @user = current_user
     @room = Room.where(user_id:@user.id) 
@@ -27,9 +37,6 @@ class RoomsController < ApplicationController
     @room = Room.find(params[:id])
     @user = current_user
   end
-
-  
-
 
   def edit
   end
