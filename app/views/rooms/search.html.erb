@@ -3,7 +3,7 @@
     <div class="row">
       <% @room.each do |room| %>
         <div class="col-3">
-          <%= image_tag "room.picture",:size => "200x200" %>
+          <div><%= image_tag 'room.picture', :size => "200x200"%></div>
           <div><%= room.name %></div>
           <div><%= room.address %></div>
           <div>¥<%= room.price %></div>

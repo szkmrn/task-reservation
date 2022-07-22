@@ -19,12 +19,12 @@ class RoomsController < ApplicationController
   end
 
   def search
-    if params[:address] == nil
+    if params[:area] == nil
       @room = Room.all
-    elsif params[:address] == "" 
+    elsif params[:area] == "" 
       @room = Room.all
     else  
-      @room = Room.where("address LIKE?",'%'+params[:address]+'%')
+      @room = Room.where("address LIKE?",'%'+params[:area]+'%')
     end
   end
 
