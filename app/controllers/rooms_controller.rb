@@ -18,16 +18,7 @@ class RoomsController < ApplicationController
     end
   end
 
-  def search
-    if params[:area] == nil
-      @room = Room.all
-    elsif params[:area] == "" 
-      @room = Room.all
-    else  
-      @room = Room.where("address LIKE?",'%'+params[:area]+'%')
-    end
-  end
-
+ 
   def posts
     @user = current_user
     @room = Room.where(user_id:@user.id) 
@@ -36,6 +27,23 @@ class RoomsController < ApplicationController
   def show
     @room = Room.find(params[:id])
     @user = current_user
+  end
+
+  def search
+    if params[:area] == nil && params[:keyword] == nil
+      @room = Room.all
+      @cnt = Room.all.count
+    elsif params[:area] == "" && params[:keyword] == ""
+      @room = Room.all
+      @cnt = Room.all.count
+    elsif params[:area] 
+      @room = Room.where("address LIKE?",'%'+params[:area]+'%')
+      @cnt = Room.where("address LIKE?",'%'+params[:area]+'%').count
+    elsif  params[:keyword] 
+      @room = Room.where("name LIKE?" || "address LIKE?" || "information LIKE?" || "price LIKE?" ,'%'+params[:keyword]+'%')
+      @cnt = Room.where("name LIKE?" || "address LIKE?" || "information LIKE?" || "price LIKE?" ,'%'+params[:keyword]+'%').count
+    else
+    end
   end
 
   def edit

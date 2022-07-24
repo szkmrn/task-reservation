@@ -44,6 +44,19 @@
 .link_user{
     color:#000;
 }
+.header-search-container{
+    display: flex;
+}
+.header-search-box{
+    margin: 1px;
+}
+.header-search-input{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 3px;
+    background-color: #444444;
+    border:1px solid #444444;
+}
 .header-left-container{
     display:flex;
 }
@@ -171,6 +184,49 @@
     text-align: center;
 }
 
+.search-number{
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.room{
+    width:100%;
+    padding:30px 60px;
+    margin: 0px;
+}
+.room-search-frame{
+    border:1px solid #e2e2e2;
+    width:100%;
+    margin-bottom: 10px;
+}
+
+.room-link{
+    text-decoration: none !important;
+    color:#000000;
+}
+.room-link:hover{
+    color: #000000;
+}
+.room-search-profile{
+    padding: 15px;
+}
+.search-profile-name{
+    font-size: 18px;
+    font-weight: bold;
+    color: #909090;
+    margin-bottom: 16px;
+}
+.search-profile-address{
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+.search-profile-price{
+    text-align: right;
+    margin-bottom: 16px;
+}
+.search-profile-image{
+    background-color: #F6F8F9;
+    height:200px;
+}
  @import "bootstrap"
 
 

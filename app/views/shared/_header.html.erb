@@ -2,13 +2,18 @@
   <div class="header-left-container">
     <img class="my-0 mr-md-auto font-weight-normal" id="home-logo" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png">
     <div class="header-search-container mt-3">
-      <div>
+      <div class="header-search-box">
         <%= form_with url: rooms_search_path,method: :get,local: true do |f| %>
-          <%= f.text_field :area %>
+          <%= f.text_field :area ,placeholder:"エリア検索",class:"header-search-input"%>
           <% submit_tag %>
         <% end %>
       </div>
-      <input type="text">
+      <div class="header-search-box">
+        <%= form_with url: rooms_search_path,method: :get,local: true do |f| %>
+          <%= f.text_field :keyword ,placeholder:"キーワード検索",class:"header-search-input"%>
+          <% submit_tag %>
+        <% end %>
+      </div>
     </div>
   </div>
   <div class="header-right-container">
