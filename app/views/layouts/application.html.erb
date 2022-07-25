@@ -13,8 +13,10 @@
       <%= render "shared/header" %>
     </header>
     <main>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      <div class="clearfix">
+        <%= notice %>
+        <%= alert %>
+      </div>
       <%= yield %>
     </main>
   </body>

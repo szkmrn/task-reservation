@@ -18,7 +18,9 @@
  main{
     z-index: 100;
  }
- 
+ .clearfix::after{
+    content: "";
+ }
  thead{
     text-align: center;
     border-bottom:1px solid #DDDDDD;
@@ -257,6 +259,30 @@
 .form-controll-submit{
     border-color: primary;
 }
+.panel-item{
+    position: relative;
+}
+.panel-title{
+    margin: 35px 0;
+}
+.panel-item span{
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+}
+.panel-image{
+    height: 360px;
+    width: 100%;
+   
+
+}
+
  @import "bootstrap"
 
 
