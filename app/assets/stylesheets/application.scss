@@ -73,6 +73,7 @@
 .home-link-user{
     color:#fff;
 }
+
 .sidebar{
     border-right: solid 1px #000;
 
@@ -114,25 +115,25 @@
     width:600px;
     margin:0 auto;
     padding:24px;
-    background-color:white;
-    border-radius:4px;
-    box-shadow:1px 1px 1px 1px #DDDDDD	;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px 1px #DDDDDD	;
 }
 
 .devise_inner{
-    width:400px;
-    margin:0 auto;
+    width: 400px;
+    margin: 0 auto;
 }
 .user-account{
-    margin:0 auto;
+    margin: 0 auto;
 }
 .user-account-box{
     margin:30px auto;
-    width:880px;
-    padding:24px;
-    background-color:white;
-    border-radius:4px;
-    box-shadow:1px 1px 1px 1px #DDDDDD	;
+    width: 880px;
+    padding: 24px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px 1px #DDDDDD	;
 }
 
 .edit_password{
@@ -140,17 +141,17 @@
 }
 
 .form-control{
-    height:1.5em;
+    height: 1.5em;
 }
 .intoroduction-form{
-    border:1px solid #ced4da;
+    border: 1px solid #ced4da;
 }
 .sign_in_link:hover{
     text-decoration: none;
 }
 .room-show-detile{
-    display:flex;
-    border-bottom:1px solid #DDDDDD;
+    display: flex;
+    border-bottom: 1px solid #DDDDDD;
 }
 .room-show-profile-name{
     font-size: large;
@@ -158,13 +159,13 @@
 }
 
 .field_with_errors{
-    height:100%;
+    height: 100%;
     background-color: red;
 
 }
 
 .room-view{
-    border-left:1px solid #DDDDDD;
+    border-left: 1px solid #DDDDDD;
 }
 
 .roombar_tab{
@@ -176,11 +177,11 @@
 
 .room-posts{
     max-width: 100vw;
-    padding:30px 60px;
+    padding: 30px 60px;
 }
 .posts-name{
     font-size: 18px;
-    font-weight:bold;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -226,6 +227,35 @@
 .search-profile-image{
     background-color: #F6F8F9;
     height:200px;
+}
+
+.top-main{
+    background-image: image-url("img_cover_top.jpeg");  
+    background-size: cover;
+    height: 650px;
+      
+}
+
+.form-frame{
+    display: flex;
+    align-items: center;
+    text-align: center;  
+    height: 100%;
+    
+}
+.form-area{
+    background-color: #fff;
+    padding: 24px;
+}
+.form-area p{
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+.form-controll{
+    margin-bottom: 1.5rem;
+}
+.form-controll-submit{
+    border-color: primary;
 }
  @import "bootstrap"
 

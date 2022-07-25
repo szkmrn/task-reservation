@@ -1,0 +1,18 @@
+<div class="top-main">
+  <div class="container h-100">
+    <div class="row h-100">
+      <div class="col-6 form-frame">
+        <div class="form-area">
+          <p class="form-area-title">poteshareで</br>まだ体験したことのない旅をしよう</p>
+          <div class="form-area-search">
+            <%= form_with url: rooms_search_path,method: :get,local: true do |f| %>
+              <div class="text-left">エリア</div>  
+              <%= f.text_field :area ,placeholder:"東京", class:"w-100 form-controll" %>
+              <%= submit_tag "探す", class:"w-100 form-controll btn btn-primary form-controll-submit"%>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
