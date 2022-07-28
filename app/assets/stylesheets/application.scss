@@ -283,6 +283,64 @@
 
 }
 
+.reservation-box{
+    width: 880px;
+    margin: 30px auto;
+    background-color: #fff; 
+}
+.reservation-content{
+    margin: o 5px;
+    padding: 20px;
+    border-bottom: 1px solid #F6F8F9;
+}
+
+.reservation-view{
+    background-color: #F6F8F9;
+}
+.reservation-link{
+    text-decoration: none;
+}
+
+
+.room-show{
+    padding: 30px 0;
+}
+.room-show-profile-intro{
+    padding: 30px 10px;
+}
+.room-show-nav{
+    padding: 20px;
+    border: 1px solid #eaedef;
+}
+.price-icon{
+    margin-bottom: 0.5rem;
+}
+.room-show-date-select{
+    padding: 15px;
+}
+.room-show-form{
+    border: 1px solid #eaedef;
+    height: 2rem;
+}
+
+.reservation-new{
+    padding: 30px 0;
+}
+.reservation-new-nav{
+    margin-left: 25%;
+}
+.reservation-new-nav{
+    padding: 20px;
+    border: 1px solid #eaedef;
+}
+.reservation-new-title{
+    border-bottom: 1px solid #eaedef;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+.form-contro{
+    height: 1.5rem;
+}
  @import "bootstrap"
 
 

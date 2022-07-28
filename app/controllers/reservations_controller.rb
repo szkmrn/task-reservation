@@ -1,5 +1,9 @@
 class ReservationsController < ApplicationController
   def index
+    @user = current_user
+    @reservation = Reservation.where(user_id: @user.id)
+    @room = Room.where(id:[@reservation.room_id])
+
   end
 
   def new
@@ -12,7 +16,6 @@ class ReservationsController < ApplicationController
   def create
     @reservation = Reservation.new(params_reservation)
     if @reservation.save
-      binding.pry
       flash[:notice]="ルームの予約が完了しました"
       redirect_to reservation_path(@reservation.id)
     else 
@@ -24,6 +27,7 @@ class ReservationsController < ApplicationController
 
   def show
     @reservation = Reservation.find(params[:id])
+    @room = Room.find(@reservation.room_id)
   end
   
   def edit
