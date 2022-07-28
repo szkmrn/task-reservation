@@ -14,5 +14,20 @@
       <p class="mt-3"><%= @room.information %></p>
       
     </div>
+    <div class="col-4">
+      <div class="room-show-nav">
+        <h5 class="price-icon"><%= @room.price %> /円</h5>
+        <div class="room-show-date-select">
+          <%=form_with model:@reservation ,url: new_reservation_path,local:true,method: :get do |r| %>
+            <%= r.date_field :start_date %>
+            <%= r.date_field :end_date %>
+            <%= r.text_field :person, type:"number"%>
+            <%= r.hidden_field :user_id ,:value =>@reserv.id %>
+            <%= r.hidden_field :room_id ,:value =>@room.id %>
+            <%= submit_tag "予約する" %>
+          <% end %>  
+        </div>
+        </div>
+    </div>
   </div>
 </div>

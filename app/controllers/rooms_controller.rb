@@ -26,7 +26,8 @@ class RoomsController < ApplicationController
   
   def show
     @room = Room.find(params[:id])
-    @user = current_user
+    @user = User.find(@room.user_id)
+    @reserv = current_user
   end
 
   def search
