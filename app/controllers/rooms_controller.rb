@@ -42,8 +42,8 @@ class RoomsController < ApplicationController
       @room = Room.where("address LIKE?",'%'+params[:area]+'%')
       @cnt = Room.where("address LIKE?",'%'+params[:area]+'%').count
     elsif  params[:keyword] 
-      @room = Room.where("name LIKE?" || "address LIKE?" || "information LIKE?" || "price LIKE?" ,'%'+params[:keyword]+'%')
-      @cnt = Room.where("name LIKE?" || "address LIKE?" || "information LIKE?" || "price LIKE?" ,'%'+params[:keyword]+'%').count
+      @room = Room.where("name LIKE?",'%'+params[:keyword]+'%').or(Room.where("address LIKE?",'%'+params[:keyword]+'%')).or(Room.where("information LIKE?",'%'+params[:keyword]+'%')) .or(Room.where("price LIKE?",'%'+params[:keyword]+'%')) 
+      @cnt = Room.where("name LIKE?",'%'+params[:keyword]+'%').or(Room.where("address LIKE?",'%'+params[:keyword]+'%')).or(Room.where("information LIKE?",'%'+params[:keyword]+'%')) .or(Room.where("price LIKE?",'%'+params[:keyword]+'%')) .count
     else
     end
   end
