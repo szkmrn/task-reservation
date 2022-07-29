@@ -2,8 +2,7 @@ class ReservationsController < ApplicationController
   def index
     @user = current_user
     @reservation = Reservation.where(user_id: @user.id)
-    @room = Room.where(id:[@reservation.room_id])
-
+    @room = Room.where(id:@reservation.room_id)
   end
 
   def new

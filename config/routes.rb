@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   
-  get 'reservations/index'
   get '/account',to:'users#account'
   get '/profile',to:'users#profile'
   devise_for :users,controllers: {
