@@ -279,8 +279,6 @@
 .panel-image{
     height: 360px;
     width: 100%;
-   
-
 }
 
 .reservation-box{
@@ -340,6 +338,18 @@
 }
 .form-contro{
     height: 1.5rem;
+}
+.reservations{
+    padding: 30px 60px;
+}
+.reservation-room-name{
+    font-size: 18px;
+    color: #6699FF;
+    border-bottom:1px solid #6699FF;
+}
+.reservation-room-name:hover{
+    text-decoration: none;
+    color: #6699FF;
 }
  @import "bootstrap"
 
