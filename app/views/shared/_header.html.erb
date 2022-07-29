@@ -1,6 +1,8 @@
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-dark border-bottom shadow-sm">
   <div class="header-left-container">
+    <%= link_to root_path do %>
     <img class="my-0 mr-md-auto font-weight-normal" id="home-logo" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png">
+    <% end %>
     <div class="header-search-container mt-3">
       <div class="header-search-box">
         <%= form_with url: rooms_search_path,method: :get,local: true do |f| %>
