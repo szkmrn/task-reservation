@@ -94,21 +94,25 @@
 .nav_content{
     padding: 15px;
 }
-
-.sidebar_link{
-    color:#000;
-   
+.sidevar_link{
+    color:#000000;
 }
+.account{
+    color: #4a90e2;
+}
+
 .sidebar_tab{
     padding:10px 0;
-    text-align:right;
+    text-align:left;
 }
 .sidebar_link:hover{
     text-decoration:none; 
-    color:blue;
+    color:#4a90e2;
 }
-.sidebar_tab:hover{
-    border-right:medium solid blue;
+.active{
+    font-size: 20px;
+    color:#4a90e2;
+    border-right:medium solid #4a90e2;
 }
 
 .user-view{
@@ -138,6 +142,7 @@
 }
 .user-account{
     margin: 0 auto;
+    background-color: #F6F8F9;
 }
 .user-account-box{
     margin:30px auto;
