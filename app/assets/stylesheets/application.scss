@@ -87,10 +87,13 @@
     border-right: solid 1px #000;
 
 }
-.nav_link :hover{
-    text-decoration:none;
+.nav_link {
+    text-decoration:none !important;
+    color:#000;
 }
-
+.nav_content{
+    padding: 15px;
+}
 
 .sidebar_link{
     color:#000;
