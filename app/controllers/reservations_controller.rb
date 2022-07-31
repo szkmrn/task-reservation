@@ -5,10 +5,14 @@ class ReservationsController < ApplicationController
   end
 
   def new
+    if @reservation = Reservation.new(params.permit(:start_date,:end_date,:person,:user_id,:room_id)).valid?
     @reservation = Reservation.new(params.permit(:start_date,:end_date,:person,:user_id,:room_id))
     @room = Room.find(@reservation.room_id)
     @days = (@reservation.end_date - @reservation.start_date).to_i
     @price = @room.price*@days*@reservation.person
+    else
+      redirect_to room_path(params[:room_id])
+    end
   end
 
   def create

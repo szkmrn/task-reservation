@@ -4,7 +4,7 @@
     <img class="my-0 mr-md-auto font-weight-normal" id="home-logo" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png">
     <% end %>
     <div class="header-search-container mt-3">
-    <i class="far fa-map-marker-alt"></i>
+    <i class="fa-solid fa-location-dot"></i>
       <div class="header-search-box">
         <%= form_with url: rooms_search_path,method: :get,local: true do |f| %>
           <%= f.text_field :area ,placeholder:"エリア検索",class:"header-search-input"%>
