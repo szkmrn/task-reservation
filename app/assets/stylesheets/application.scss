@@ -56,8 +56,17 @@
 .header-search-container{
     display: flex;
 }
+
+
 .header-search-box{
     margin: 1px;
+    position: relative;
+}
+.header-search-box i{
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    font-size: 18px;
 }
 .header-search-input{
     padding-top: 5px;
@@ -65,6 +74,7 @@
     margin-right: 3px;
     background-color: #444444;
     border:1px solid #444444;
+    padding-left: 30px;
 }
 .header-left-container{
     display:flex;
@@ -371,7 +381,6 @@
     color: #6699FF;
 }
  @import "bootstrap";
-
- 
+ @import "font-awesome";
 
  
