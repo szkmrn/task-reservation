@@ -14,11 +14,14 @@
     </header>
     <main>
       <div class="clearfix">
-        <%= render "shared/error_form" %>
+        
         <%= notice %>
         <%= alert %>
       </div>
       <%= yield %>
     </main>
+    <footer>
+      <%= render "shared/footer" %>
+    </footer>
   </body>
 </html>
