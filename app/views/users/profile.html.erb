@@ -11,6 +11,7 @@
       
         <h4 class="mb-3 mr-5 ml-5 row">プロフィール</h4>
         <div class="mr-10 ml-5 row ">
+        <%= render "shared/error",obj:@user %>
           <div class="col-10 mb-5 text-center ">
             <% if @user.image.attached? %>
               <%= image_tag @user.image ,style: "border-radius: 50%",:size => "100x100" %>

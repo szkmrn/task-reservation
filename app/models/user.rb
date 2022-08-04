@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
          
   validates :name, presence: true
-  validates :introduction, length: { maximum: 200 } 
+  validates :introduction, presence: true, length: { maximum: 200 } 
 
   has_one_attached :image
   has_many :rooms
