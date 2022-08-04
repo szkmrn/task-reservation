@@ -1,4 +1,5 @@
 
+<%if @user_check == false %>
 <div class="container room-show-container"> 
   <div class="row">
     <div class="col-2">
@@ -80,3 +81,10 @@
     </div>
   </div>
 </div>  
+<%else%>
+<div class="container room-show-container room-profile-access"> 
+  <h3>ルーム登録を行うには、プロフィールの編集を行ってください</h3>
+  <%= link_to "プロフィール編集画面へ",profile_path ,class:"btn btn-primary"%>
+</div>  
+
+<%end%>

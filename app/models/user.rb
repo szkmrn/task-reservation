@@ -10,12 +10,8 @@ class User < ApplicationRecord
   has_one_attached :image
   has_many :rooms
   has_many :reservations
+
   
-  with_options presence: true, if: :user_signed_in? do
-    validates :introduction
-    validates :image
-  end
- 
  
   
 

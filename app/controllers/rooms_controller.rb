@@ -4,7 +4,8 @@ class RoomsController < ApplicationController
   end
 
   def new
-    @user = current_user
+    @user =current_user
+    @user_check = User.exists?(id: @user.id,introduction: nil)
     @room = Room.new
   end
 
