@@ -185,11 +185,6 @@
     font-weight: bold;
 }
 
-.field_with_errors{
-    height: 100%;
-    background-color: red;
-
-}
 
 .room-view{
     border-left: 1px solid #DDDDDD;
@@ -349,6 +344,17 @@
     height: 430px;
 }
 
+.errors-messages-box{
+    text-align: center;
+    color: #fff;
+    padding: 0;
+}
+.errors-messages{
+    background-color: #F35500;
+    padding:12px 20px;
+}
+
+
 
 .reservation-new{
     padding: 30px 0;
@@ -380,6 +386,10 @@
     text-decoration: none;
     color: #6699FF;
 }
+
+
+
+
 footer {
     background-color: #000000;
     width: 100%;

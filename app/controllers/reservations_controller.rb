@@ -4,14 +4,17 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.where(user_id: @user.id)
   end
 
-  def new
-    if @reservation = Reservation.new(params.permit(:start_date,:end_date,:person,:user_id,:room_id)).valid?
-    @reservation = Reservation.new(params.permit(:start_date,:end_date,:person,:user_id,:room_id))
-    @room = Room.find(@reservation.room_id)
-    @days = (@reservation.end_date - @reservation.start_date).to_i
-    @price = @room.price*@days*@reservation.person
+  def new 
+    @reservation = Reservation.new(params_reservation)
+    if @reservation.valid?
+      @room = Room.find(@reservation.room_id)
+      @days = (@reservation.end_date - @reservation.start_date).to_i
+      @price = @room.price*@days*@reservation.person
     else
-      redirect_to room_path(params[:room_id])
+      @room = Room.find(@reservation.room_id)
+      @user = User.find(@room.user_id)
+      @reserv = current_user
+      render template:"rooms/show"
     end
   end
 
