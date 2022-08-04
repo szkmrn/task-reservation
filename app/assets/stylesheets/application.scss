@@ -92,6 +92,19 @@
     display: table-cell;
     vertical-align: middle;
 }
+.user_headnav{
+    position:absolute;
+    right: 5px;
+    top: 105px;
+    z-index: 1000;
+    width: fit-content;
+}
+.header-nav-menu{
+    
+
+}
+
+
 
 .home-link-user{
     color:#fff;
@@ -135,11 +148,7 @@
 .conteiner-view{
     height:100%;
 }
-.user_headnav{
-    position:absolute;
-    left:1245px;
-    z-index: 1000;
-}
+
 .dvise_frame{
     width:600px;
     margin:0 auto;
