@@ -10,9 +10,10 @@ class User < ApplicationRecord
   has_one_attached :image
   has_many :rooms
   has_many :reservations
-
   
  
+  validates :introduction,presence: true, on: :update
+  validates :image,presence: true, on: :update
   
 
 end
