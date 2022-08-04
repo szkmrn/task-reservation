@@ -9,8 +9,6 @@ class Room < ApplicationRecord
     validates :price,presence:true,numericality:true
     validates :address,presence:true
     validates :picture,presence:true
-
     
-
-
+    
 end

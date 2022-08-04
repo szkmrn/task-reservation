@@ -4,6 +4,7 @@ class RoomsController < ApplicationController
   end
 
   def new
+    @user = current_user
     @room = Room.new
   end
 
