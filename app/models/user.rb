@@ -5,10 +5,15 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
          
   validates :name, presence: true
-  validates :introduction, presence: true, length: { maximum: 200 } 
+  validates :introduction, length: { maximum: 200 } 
 
   has_one_attached :image
   has_many :rooms
   has_many :reservations
   
+  
+  validates :introduction, presence: true if :user_signed_in?
+  validates :image, presence: true if :user_signed_in?
+  
+
 end
