@@ -29,10 +29,12 @@
             <label>人数</label>
             <%= r.text_field :person, type:"number" ,class:"room-show-form mb-4 w-100" %>
      
-            <% if user_signed_in? %>
+            <% if @user_check == true %>
+              <%= link_to "プロフィールを編集する", profile_path,class:"btn btn-secondary w-100" %>
+            <% elsif @user_check == false  %>
               <%= r.hidden_field :user_id ,:value =>@reserv.id ,class:"room-show-form mb-4" %>
               <%= r.hidden_field :room_id ,:value =>@room.id ,class:"room-show-form mb-4" %>
-              <%= submit_tag "予約する" ,class:"btn btn-primary w-100" %>
+              <%= submit_tag "予約する" ,class:"btn btn-primary w-100" %>             
             <% else %>
               <%= link_to "ログインする", "/users/sign_in",class:"btn btn-secondary w-100" %>
             <% end %>

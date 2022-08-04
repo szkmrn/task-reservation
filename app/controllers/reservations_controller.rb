@@ -14,6 +14,9 @@ class ReservationsController < ApplicationController
       @room = Room.find(@reservation.room_id)
       @user = User.find(@room.user_id)
       @reserv = current_user
+      if user_signed_in?
+        @user_check = User.exists?(id: @reserv.id,introduction: nil)
+      end      
       render template:"rooms/show"
     end
   end
