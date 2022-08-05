@@ -16,6 +16,8 @@ class RoomsController < ApplicationController
       flash[:notice] = "ルームの新規登録が完了しました"
       redirect_to room_path(@room.id)
     else
+      @user =current_user
+      @user_check = User.exists?(id: @user.id,introduction: "")
       render "new"
     end
   end
