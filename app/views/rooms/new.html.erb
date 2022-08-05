@@ -1,0 +1,91 @@
+
+<%if @user_check == false %>
+  <div class="container room-show-container"> 
+    <div class="row">
+      <div class="col-2">
+        <%=render "shared/roombar" %>
+      </div>
+      <div class="col-10 room-view">
+        <div class="room-new-box">
+          <%= form_with model:@room ,url:rooms_path,local:true,method: :post do |r| %>
+            <div class="room-new-field mb-3 ">
+              <h3>ルーム情報登録</h3>
+            </div>
+            <div class="room-new-field mb-5 ">
+              <%=render "shared/error",obj:@room %>
+            </div>
+            <div class="room-new-field mb-3 ">
+              <div class="row">
+                <div class="col-3">
+                  <label>ルーム名</label>
+                  <span class="badge badge-danger">必須</span>
+                </div>
+                <div class="col-9">
+                  <%= r.text_field :name,class:"w-100" %>
+                </div>
+              </div>
+            </div>
+
+            <div class="room-new-field mb-3 ">
+              <div class="row">
+                <div class="col-3">
+                <label>ルーム紹介</label>
+                  <span class="badge badge-danger">必須</span> 
+                </div>
+                <div class="col-9">
+                  <%= r.text_area :information,class:"w-100" %>
+                </div>
+              </div>
+            </div>
+
+            <div class="room-new-field mb-3 ">
+              <div class="row">
+                <div class="col-3">
+                <label>料金</label>
+                  <span class="badge badge-danger">必須</span>
+                </div>
+                <div class="col-9">
+                  <%= r.text_field :price,type:"number",class:"w-100" %>
+                </div>
+              </div>
+            </div>
+
+            <div class="room-new-field mb-3 ">
+              <div class="row">
+                <div class="col-3">
+                <label>住所</label>
+                  <span class="badge badge-danger">必須</span>
+                </div>
+                <div class="col-9">
+                  <%= r.text_field :address,class:"w-100" %>
+                </div>
+              </div>
+            </div>
+
+            <div class="room-new-field mb-3 ">
+              <div class="row">
+                <div class="col-3">
+                <label>ルーム画像</label> 
+                  <span class="badge badge-danger">必須</span>
+                </div>
+                <div class="col-9">
+                  <%= r.file_field :picture %>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-3 p-0">
+              <%= r.submit "登録", class:"p-2 m-1 btn-outline-primary text-white bg-primary col-12 rounded" %>
+            </div> 
+        <% end %>  
+      </div>
+    </div>
+  </div>  
+
+<%else%>
+  <div class="container room-show-container room-profile-access"> 
+    <h3>ルーム登録を行うには、プロフィールの編集を行ってください</h3>
+    <%= link_to "プロフィール編集画面へ",profile_path ,class:"btn btn-primary"%>
+  </div>  
+
+<%end%>

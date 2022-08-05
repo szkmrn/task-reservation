@@ -1,0 +1,13 @@
+<div class="sidebar_content">
+  <ul>
+    <% if current_page?(account_path) %>
+    <li class="sidebar_tab active"><%=link_to"アカウント","/account",class: "sidebar_link account"%></li> 
+    <li class="sidebar_tab "><%=link_to"プロフィール","/profile",class: "sidebar_link "%></li>
+    <% else %>
+    <li class="sidebar_tab "><%=link_to"アカウント","/account",class: "sidebar_link "%></li> 
+    <li class="sidebar_tab active" ><%=link_to"プロフィール","/profile",class: "sidebar_link account"%></li>
+    <% end %>
+    </ul>
+  
+  
+</div>

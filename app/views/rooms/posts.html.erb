@@ -1,0 +1,27 @@
+<div class="room-posts">
+  <h4 class="pd-4">登録済みルーム一覧</h4>
+  <table class="posts-table">
+  <thead>
+    <tr>
+      <th>ルーム画像</th>
+      <th>ルーム名</th>
+      <th>ルーム紹介</th>
+      <th>料金</th>
+      <th>作成日</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @room.each do |room| %>
+      <tr>
+        <td>
+          <%= image_tag room.picture,:size => "200x200"%>
+        </td>
+        <td class="posts-name"><%=link_to room.name,room_path(room.id) %></td>
+        <td><%= room.information %></td>
+        <td>¥<%= room.price %></td>
+        <td><%= room.created_at %></td>
+      </tr> 
+    <% end %>
+  </tbody>
+  </table>
+</div>

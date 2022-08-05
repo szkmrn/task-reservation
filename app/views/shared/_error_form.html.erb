@@ -1,0 +1,11 @@
+
+<div class="notificattions"> 
+<% if object.errors.any? %>
+   <ul class="errors-messages-box">
+     <% object.errors.full_messages.each do |message| %>
+       <li class="errors-messages"><%= message %></li>
+     <% end %>
+   </ul>
+   <% end %>
+</div>  
+

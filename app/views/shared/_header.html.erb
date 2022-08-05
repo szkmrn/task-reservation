@@ -1,0 +1,48 @@
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 header-container shadow-sm">
+  <div class="header-left-container">
+    <%= link_to root_path do %>
+    <img class="my-0 mr-md-auto font-weight-normal" id="home-logo" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png">
+    <% end %>
+    <div class="header-search-container mt-3">
+      <div class="header-search-box">
+        <%= form_with url: rooms_search_path,method: :get,local: true do |f| %>
+          <%= f.text_field :area ,placeholder:"エリア検索",class:"header-search-input"%>
+          <% submit_tag %>
+        <% end %>
+        <i class="fas fa-map-marker-alt"></i>
+      </div>
+      
+      <div class="header-search-box">
+        <%= form_with url: rooms_search_path,method: :get,local: true do |f| %>
+          <%= f.text_field :keyword ,placeholder:"キーワード検索",class:"header-search-input"%>
+          <% submit_tag %>
+        <% end %>
+        <i class="fas fa-search "></i>
+      </div>
+      
+    </div>
+  </div>
+  <div class="header-right-container">
+    <% if user_signed_in? %>
+      <div class="p-2 m-1 text-white header-user-name"><%= current_user.name %></div>
+      <div class="user_header_image nav-item p-2 m-1">
+        <% if current_user.image.attached? %>
+          <%= image_tag current_user.image ,style: "border-radius: 50%",:size => "65x65" %>
+        <%else%>
+          <%= image_tag "upper_body-2.png",style: "border-radius: 50%",:size => "65x65"%>
+        <%end%>
+      </div>
+    <% else %>  
+      <%= link_to"ログイン","/users/sign_in",class:"home-link-user p-2 m-1 btn btn-outline-primary text-white bg-primary"%>
+      <%= link_to"新規登録","/users/sign_up",class:"home-link-user p-2 m-1 btn btn-outline-info text-white bg-info"%>
+    <% end %>  
+      <%= render "shared/headnav" %>  
+  </div>
+</div>
+
+<script>
+  $('.user_headnav').hide();
+  $('.user_header_image').on('click',function(){
+    $('.user_headnav').slideToggle();
+  })
+</script>

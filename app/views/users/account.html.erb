@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-2 sidebar">
+    <%= render "shared/sidebar" %>
+  </div>
+  <div class="col-10 user-account">
+    <div class="user-account-box w-880">
+  
+      <h4 class="mb-3 mr-5 ml-5 row">アカウント</h4>
+      <div class="mb-5 mr-5 ml-5 row">
+        <label for="staticEmail" class="col-sm-3 col-form-label">メールアドレス</label>
+        <div class="col-9">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+        </div>
+      </div>
+      <div class="mb-5 mr-5 ml-5 row">
+        <label for="inputPassword" class="col-sm-3 col-form-label">パスワード</label>
+        <div class="col-9">********</div>
+      </div>
+      <div class="mb-3 mr-10 ml-5 row">
+        <%=link_to"編集","/users/edit",class:"btn btn-primary text-white p-2 m-1 btn-outline-primary text-white bg-primary rounded col-2"%>
+      </div>
+    </div>
+  </div>
+</div>
+
+					

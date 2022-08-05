@@ -1,0 +1,9 @@
+<div class="user_headnav p-2 bg-light text-left">  
+  <ul class="p-2 mb-0 header-nav-menu">
+    <li class="mb-1"><%=link_to "ルーム登録",new_room_path,class: "nav_link",:style=>"color:black;"%></li>
+    <li class="mb-1"><%=link_to "予約済みルーム一覧",reservations_path,class: "nav_link",:style=>"color:black;" %></li>
+    <li class="mb-1"><%=link_to "登録済みルーム一覧",rooms_posts_path,class: "nav_link",:style=>"color:black;"%></li>
+    <li class="mb-1"><%=link_to "設定",account_path,class: "nav_link",:style=>"color:black;"%></li>
+    <li class="mb-1"><%=link_to "ログアウト",destroy_user_session_path,method: :delete,class: "nav_link",:style=>"color:black;"%></li>
+  </ul>
+</div>   

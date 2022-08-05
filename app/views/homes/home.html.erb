@@ -1,0 +1,49 @@
+<div class="top-main">
+  <div class="container h-100">
+    <div class="row h-100">
+      <div class="col-6 form-frame">
+        <div class="form-area">
+          <p class="form-area-title">poteshareで</br>まだ体験したことのない旅をしよう</p>
+          <div class="form-area-search">
+            <%= form_with url: rooms_search_path,method: :get,local: true do |f| %>
+              <div class="text-left">エリア</div>  
+              <%= f.text_field :area ,placeholder:"東京", class:"w-100 form-controll" %>
+              <%= submit_tag "探す", class:"w-100 form-controll btn btn-primary form-controll-submit"%>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="panel-area m-5">
+    <h1 class="panel-title">おすすめのエリア</h1>
+    <div class="row">
+      <div class="panel-item col-3">
+        <%= link_to '/rooms/search?utf8=%E2%9C%93&area=%E6%9D%B1%E4%BA%AC',class:"room-link" do %>
+          <span>東京</span>
+          <%=image_tag "img_tokyo.jpeg",class:"panel-image" %>
+        <% end %>  
+      </div>
+      <div class="panel-item col-3">
+        <%= link_to '/rooms/search?utf8=%E2%9C%93&area=%E5%A4%A7%E9%98%AA',class:"room-link" do %>
+          <span>大阪</span>
+          <%=image_tag "img_osaka.jpeg",class:"panel-image" %>
+        <% end %>  
+      </div>
+      <div class="panel-item col-3">
+        <%= link_to '/rooms/search?utf8=%E2%9C%93&area=%E4%BA%AC%E9%83%BD',class:"room-link" do %>
+          <span>京都</span>
+          <%=image_tag "img_kyoto.jpeg",class:"panel-image" %>
+        <% end %>  
+      </div>
+      <div class="panel-item col-3">
+        <%= link_to '/rooms/search?utf8=%E2%9C%93&area=%E5%8C%97%E6%B5%B7%E9%81%93',class:"room-link" do %>
+          <span>北海道</span>
+          <%=image_tag "img_sapporo.jpeg",class:"panel-image" %>
+        <% end %>  
+      </div>
+    </div>
+  </div>
+</div>

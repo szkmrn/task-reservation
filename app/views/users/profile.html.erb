@@ -1,0 +1,59 @@
+
+<div class="row h-100">
+  <div class="col-2 sidebar">
+    <%= render "shared/sidebar" %>
+  </div>
+
+  <div class="col-10 user-account">
+    <div class="user-account-box">
+    
+      <%=form_with model:@user do |f|%>
+      
+        <h4 class="mb-3 mr-5 ml-5 row">プロフィール</h4>
+        <%= render "shared/error",obj:@user %>
+        <div class="mr-10 ml-5 row ">
+          <div class="col-10 mb-5 text-center ">
+            <% if @user.image.attached? %>
+              <%= image_tag @user.image ,style: "border-radius: 50%",:size => "100x100" %>
+            <%else%>
+              <%= image_tag "upper_body-2.png",style: "border-radius: 50%",:size => "100x100"%>  
+            <% end %>
+          </div>
+        </div>  
+        <div class="mb-5 mr-5 ml-5 row">
+          <div class="col-3">
+            <label for="exampleFormControlInput1" class="form-label">アイコン画像</label>
+            <span class="badge badge-danger">必須</span>
+          </div>
+          <div class="col-8">
+            <%= f.file_field :image,class:"col-12"%>
+          </div> 
+        </div>
+        <div class="mb-5 mr-5 ml-5 row">
+          <div class="col-3">
+            <label for="exampleFormControlInput1" class="form-label ">名前</label>
+            <span class="badge badge-danger">必須</span>
+          </div>
+          <div class="col-9">
+            <%= f.text_field:name,class:"col-12 form-control"%>
+          </div> 
+        </div>
+        <div class="mb-5 mr-5 ml-5 row">
+          <div class="col-3">
+            <label for="exampleFormControlTextarea1" class="form-label ">自己紹介</label>
+            <span class="badge badge-danger">必須</span>
+          </div> 
+          <div class="col-9">  
+            <%= f.text_area:introduction,class:"col-12 intoroduction-form" %>
+          </div>  
+        </div>
+        <div class="ml-5 col-3">
+         <%= f.submit "更新", class:" p-2 m-1 btn-outline-primary text-white bg-primary col-12 rounded" %>
+        </div> 
+      
+      <% end %>
+    </div>  
+  </div>
+</div>
+
+					

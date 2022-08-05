@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "webpack-dev-server": "2.11.2"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}
